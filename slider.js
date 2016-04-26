@@ -25,7 +25,9 @@ app.directive('ionslider',function($timeout){
             from:'=',
             disable:'=',
             onChange:'=',
-            onFinish:'='
+            onFinish:'=',
+            onStart:'=',
+            onUpdate:'='
 
         },
         template:'<div></div>',
@@ -45,10 +47,12 @@ app.directive('ionslider',function($timeout){
                     step:$scope.step,
                     hideMinMax:$scope.hideMinMax,
                     hideFromTo:$scope.hideFromTo,
-                    from:$scope.from,
+                    from:$tscope.from,
                     disable:$scope.disable,
                     onChange:$scope.onChange,
-                    onFinish:$scope.onFinish
+                    onFinish:$scope.onFinish,
+                    onStart:$scope.onStart,
+                    onUpdate:$scope.onUpdate
                 });
             })();
             $scope.$watch('min', function(value) {
