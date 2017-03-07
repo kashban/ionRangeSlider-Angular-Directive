@@ -9,7 +9,7 @@ var app = angular.module('ionSlider',['ngRoute']);
 
 app.directive('ionslider',function($timeout){
     return{
-        restrict:'E',
+        restrict:'EC',
         scope:{min:'=',
             max:'=',
             type:'@',
@@ -30,7 +30,7 @@ app.directive('ionslider',function($timeout){
             onUpdate:'='
 
         },
-        template:'<div></div>',
+        template:'<input>',
         replace:true,
         link:function($scope,$element,attrs){
             (function init(){
