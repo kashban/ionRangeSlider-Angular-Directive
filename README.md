@@ -28,7 +28,8 @@ Following attributes can be used inside <ionslider></ionslider> tag:
 	disable, (updatable)
 	hide-min-max,
 	hide-from-to,
-	from (updatable)
+	from (updatable),
+	to (updatable)
 	
 Value Change Events
 -------------------
@@ -65,7 +66,8 @@ Example HTML
         grid=true
         min="model.min"
         max="model.max"
-        from="model.currentValue"
+        from="model.currentMinValue"
+        to="model.currentMaxValue"
         disable="model.disabled"
         on-change="rangeChangeCallback"
         on-finish="rangeFinishCallback"></ionslider>

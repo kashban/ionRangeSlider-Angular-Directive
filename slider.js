@@ -23,6 +23,7 @@ app.directive('ionslider',function($timeout){
             hideMinMax:'@',
             hideFromTo:'@',
             from:'=',
+            to: '=',
             disable:'=',
             onChange:'=',
             onFinish:'=',
@@ -48,6 +49,7 @@ app.directive('ionslider',function($timeout){
                     hideMinMax:$scope.hideMinMax,
                     hideFromTo:$scope.hideFromTo,
                     from:$scope.from,
+                    to: $scope.to,
                     disable:$scope.disable,
                     onChange:$scope.onChange,
                     onFinish:$scope.onFinish,
@@ -63,6 +65,9 @@ app.directive('ionslider',function($timeout){
             });
             $scope.$watch('from', function(value) {
                 $timeout(function(){ $element.data("ionRangeSlider").update({from: value}); });
+            });
+            $scope.$watch('to', function (value) {
+                $timeout(function () { $element.data("ionRangeSlider").update({ to: value }); });
             });
             $scope.$watch('disable', function(value) {
                 $timeout(function(){ $element.data("ionRangeSlider").update({disable: value}); });
