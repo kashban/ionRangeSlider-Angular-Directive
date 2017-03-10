@@ -47,7 +47,7 @@ app.directive('ionslider',function($timeout){
                     step:$scope.step,
                     hideMinMax:$scope.hideMinMax,
                     hideFromTo:$scope.hideFromTo,
-                    from:$tscope.from,
+                    from:$scope.from,
                     disable:$scope.disable,
                     onChange:$scope.onChange,
                     onFinish:$scope.onFinish,
